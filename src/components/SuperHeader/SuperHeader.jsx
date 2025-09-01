@@ -6,6 +6,7 @@ import { COLORS } from '../../constants';
 import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
+import Spacer from '../Spacer';
 
 const SuperHeader = () => {
   return (
@@ -14,7 +15,10 @@ const SuperHeader = () => {
         Free shipping on domestic orders over $75!
       </MarketingMessage>
       <SearchInput />
+      <Spacer size={24} />
       <HelpLink href="/help">Help</HelpLink>
+      <Spacer size={24} />
+
       <UnstyledButton>
         <Icon id="shopping-bag" strokeWidth={1} />
       </UnstyledButton>
@@ -23,12 +27,18 @@ const SuperHeader = () => {
 };
 
 const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
+  height: 40px;
+  padding-left:32px;
+  padding-right:32px;
 `;
 
 const MarketingMessage = styled.span`
+  margin-right: auto;
   color: ${COLORS.white};
 `;
 
